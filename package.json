@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --baseHref=\"https://fahimasadia.github.io/en-mart/\"",
+    "build": "ng build --prod",
+    "github": "ng build --prod --base-href \"https://fahimasadia.github.io/en-mart/\" && ngh",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
