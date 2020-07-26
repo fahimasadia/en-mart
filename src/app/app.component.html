@@ -1,0 +1,33 @@
+<div class="header">
+    <div class="container">
+        <a routerLink="/" class="logo">
+            <span>E-N</span>
+            MART
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="search-products">
+        <input type="text" class="form-control" placeholder="Search products" (keyup)="search($event.target.value)">
+    </div>
+
+    <div class="products">
+        <div class="product-wrapper" *ngFor="let product of filteredProducts">
+            <div class="product">
+                <div class="product-name">{{product.name}}</div>
+                <div class="product-images">
+                    <img src="{{product.img[0]}}">
+                </div>
+                <div class="product-info">
+                    <div *ngFor="let info of product.info" class="font-weight-300">
+                        {{info.size}} -  <span class="font-weight-500">{{info.price}}</span> BDT
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag" *ngFor="let tag of product.tags">{{tag}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
