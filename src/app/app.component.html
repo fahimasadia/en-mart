@@ -9,7 +9,7 @@
 
 <div class="container">
     <div class="search-products">
-        <input type="text" class="form-control" placeholder="Search products" (keyup)="search($event.target.value)">
+        <input type="text" class="form-control" placeholder="Search products" #searchField (keyup)="searchProduct(searchField.value)">
     </div>
 
     <div class="products">

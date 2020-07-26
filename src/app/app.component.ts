@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
         });
     }
 
-    search(key: string) {
+    searchProduct(key: string) {
         if (key.length < 3) {
             key = '';
         }
